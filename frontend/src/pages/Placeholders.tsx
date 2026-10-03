@@ -57,19 +57,6 @@ export function Home() {
   )
 }
 
-export function Login() {
-  return (
-    <div className="flex min-h-dvh items-center justify-center bg-slate-50 px-4 py-12">
-      <div className="card w-full max-w-md p-8">
-        <h1 className="text-2xl font-semibold text-slate-900">Login</h1>
-        <p className="mt-2 text-sm text-slate-500">
-          Delivered by ticket UI-03.
-        </p>
-      </div>
-    </div>
-  )
-}
-
 export function Register() {
   return (
     <div className="flex min-h-dvh items-center justify-center bg-slate-50 px-4 py-12">

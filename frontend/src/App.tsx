@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import AppLayout from './components/layout/AppLayout'
 import {
   Dashboard,
   Home,
@@ -10,19 +11,24 @@ import {
 } from './pages/Placeholders'
 
 /**
- * Route table. The `AppLayout` wrapper and navigation arrive in UI-02;
- * for now each route renders its page directly.
+ * Route table.
+ *
+ * The public pages sit outside `AppLayout` because they render their own
+ * centred card; everything else renders inside the shared shell.
  */
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/records" element={<Records />} />
-        <Route path="*" element={<NotFound />} />
+
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/records" element={<Records />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

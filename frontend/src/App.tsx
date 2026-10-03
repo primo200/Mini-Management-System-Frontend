@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import AppLayout from './components/layout/AppLayout'
 import Login from './pages/Login'
-import { Dashboard, Home, NotFound, Records, Register } from './pages/Placeholders'
+import Register from './pages/Register'
+import { Dashboard, Home, NotFound, Records } from './pages/Placeholders'
 
 /**
  * Route table.

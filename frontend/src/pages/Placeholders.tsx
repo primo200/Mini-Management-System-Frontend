@@ -57,17 +57,6 @@ export function Home() {
   )
 }
 
-export function Register() {
-  return (
-    <div className="flex min-h-dvh items-center justify-center bg-slate-50 px-4 py-12">
-      <div className="card w-full max-w-md p-8">
-        <h1 className="text-2xl font-semibold text-slate-900">Create an account</h1>
-        <p className="mt-2 text-sm text-slate-500">Delivered by ticket UI-04.</p>
-      </div>
-    </div>
-  )
-}
-
 export function Dashboard() {
   return (
     <div className="space-y-6">
